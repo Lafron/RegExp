@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .col{
+            float: left;
+            width: 200px;
+            padding: 10px;
+        }
+        .row{
+            clear: both;
+        }
+        select{
+            padding: 10px;
+            border-radius: 12px;
+            width: 190px;
+        }
+        input{
+            padding: 10px;
+            border-radius: 12px;
+            width: 167px;
+        }
+    </style>
+</head>
+<body>
+    <div id="tableDiv">
+        <div id="row1">
+            <div id="selectDiv" class="col">
+                <select name="objectType" id="objectType" title="objectType">
+                    <option value="flat">квартира</option>
+                    <option value="cottage">коттедж</option>
+                    <option value="office">офис</option>
+                </select>
+            </div>
+            <div id="squareDiv" class="col">
+                <input type="text" placeholder="общая площадь">
+            </div>
+        </div>
+        <div id="row2" class="row">
+            <div id="amountDiv" class="col">
+                <input type="text" placeholder="колличество помещений">
+            </div>
+            <div id="termDiv" class="col">
+                <input type="text" placeholder="срок исполнения(в днях)">
+            </div>
+        </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
