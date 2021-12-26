@@ -25,23 +25,18 @@ tels.forEach(input => {
     });
 });
 
-console.dir(texts);
-console.dir(emails);
-console.dir(tels);
-console.dir(submits);
 
 submits.forEach(submit => {
     submit.addEventListener("click", e => {
         e.preventDefault();
         let val = emails[e.target.id].value;
-        //console.log();
-        //const p =/^[a-z0-9_\.\-]+@([a-z0-9\-]+\.)+[a-z]{2,4}}$/i;
         
         if(!validateEmail(val)){
             alert("address is not correct");
+            emails[e.target.id].value = "";
         }
         else{
-            console.log("submit");
+            alert("submit");
         }
     });
 });
@@ -50,6 +45,6 @@ submits.forEach(submit => {
   return String(email)
     .toLowerCase()
     .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        /[\-\.\w]+@([\w]+\.)+[\w]+/gi
     );
 };
