@@ -45,6 +45,6 @@ submits.forEach(submit => {
   return String(email)
     .toLowerCase()
     .match(
-        /[\-\.\w]+@([\w]+\.)+[\w]+/gi
+        /[\-\_\.\!\~\*\'\w]+@([\w]+\.)+[\w]+/gi
     );
-};
+};//  @  -  _  . ! ~ * '
